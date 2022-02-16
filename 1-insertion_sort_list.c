@@ -49,9 +49,9 @@ void insertion_sort_list(listint_t **list)
 	listint_t *node = NULL;
 	listint_t *tmp = NULL;
 
-	if (!list || (!(list)->prev) && !(list)->next)
+	if (!list || (!((*list)->prev) && !((*list)->next)))
 		return;
-	head = list;
+	head = *list;
 	head = head->next;
 
 	while (head)
